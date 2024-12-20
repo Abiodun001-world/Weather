@@ -57,7 +57,7 @@ WeatherApp is released under the [MIT License](https://opensource.org/licenses/M
 
 ## Try WeatherApp
 
-To experience the power of WeatherApp, visit the official website: [WeatherApp]( https://abiodun-weather-app.netlify.app/)
+To experience the power of WeatherApp, visit the official website: [WeatherApp](https://abiodun001-world.github.io/Weather-App/)
 
 
 
