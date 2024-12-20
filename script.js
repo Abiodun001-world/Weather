@@ -1,9 +1,11 @@
 // fetching and displaying the weather in a Country 
 let weather = {
-    "apikey": "85003a0bbdc3a50e6ee03456c2fdc06f",
+    //85003a0bbdc3a50e6ee03456c2fdc06f
+    "apikey": "AIzaSyBUGzHOJ0Eohu3MKqzbeWZ032L0ynt41uI",
     fetchWeather: function(city) {
         fetch(
-           "https://api.openweathermap.org/data/2.5/weather?q="
+            // https://api.openweathermap.org/data/2.5/weather?q=
+           "https://airquality.googleapis.com/v1/currentConditions:lookup?"
             + city
              + "&units=metric&appid="
              + this.apikey
@@ -27,7 +29,8 @@ let weather = {
       const { temp, humidity} = data.main;
       const { speed } = data.wind;
       document.querySelector(".city").innerText = "Weather in " + name;
-      document.querySelector(".icon").src = "https://openweathermap.org/img/wn/"+ icon + ".png";
+        // https://openweathermap.org/img/wn/
+      document.querySelector(".icon").src = ""+ icon + ".png";
       document.querySelector (".temp").innerText = temp + "°C";
       document.querySelector(".humidity").innerHTML ="Humidity: " + humidity + "%";
       document.querySelector(".wind").innerHTML ="Wind speed : " + speed + " km/h";
