@@ -31,7 +31,17 @@ let weather = {
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind speed: " + speed + " km/h";
         document.querySelector(".weather").classList.remove("loading");
-        document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')";
+        fetch("https://source.unsplash.com/1600x900/?" + name)
+            .then((response) => {
+                if (response.ok) {
+                    document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')";
+                } else {
+                    document.body.style.backgroundImage = "url('default-image-url.jpg')";
+                }
+            })
+            .catch(() => {
+                document.body.style.backgroundImage = "url('default-image-url.jpg')";
+            });
     },
     search: function() {
         this.fetchWeather(document.querySelector(".search-bar").value);
