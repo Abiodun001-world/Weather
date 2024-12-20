@@ -1,10 +1,9 @@
 // fetching and displaying the weather in a Country 
 let weather = {
-    // Replace with your actual Google API key
-    "apikey": "AIzaSyBUGzHOJ0Eohu3MKqzbeWZ032L0ynt41uI",
-    fetchWeather: function(city) {
+        "apikey": "85003a0bbdc3a50e6ee03456c2fdc06f",
+      fetchWeather: function(city) {
         fetch(
-            "https://maps.googleapis.com/maps/api/weather?q="
+        "https://api.openweathermap.org/data/2.5/weather?q="
             + city
             + "&units=metric&key="
             + this.apikey
@@ -50,3 +49,17 @@ document.querySelector(".search-bar").addEventListener("keyup", function(event) 
 });
 
 weather.fetchWeather("Nigeria");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
